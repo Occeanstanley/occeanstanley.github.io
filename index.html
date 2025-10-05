@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stanley Occean — Data Science Portfolio</title>
+  <meta name="description" content="Portfolio of Stanley Occean — Data Science, Analytics, and AI projects, experience, and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Stanley Occean",
+    "jobTitle": "Aspiring Data Scientist",
+    "url": "https://example.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/stanley-occean"
+    ]
+  }
+  </script>
+</head>
+<body>
+<header class="site-header">
+  <nav class="container nav">
+    <a class="logo" href="#top">SO</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <ul class="nav-list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌓</button></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero container">
+    <div class="hero-text">
+      <h1>Hi, I'm <span class="accent">Stanley Occean</span> 👋</h1>
+      <p class="lead">Aspiring Data Scientist (M.S. '25 @ Pace) · AI/ML • Analytics • Automation</p>
+      <p class="sublead">I turn messy data into decisions—building dashboards, ML models, and useful tools.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">See projects</a>
+        <a class="btn" href="assets/Stanley_Occean_Resume.pdf" target="_blank" rel="noopener">Download résumé</a>
+        <a class="btn ghost" href="mailto:stanley@example.com">Email me</a>
+      </div>
+      <div class="meta">
+        <span>📍 New York, USA</span>
+        <span>💼 South Shore University Hospital · Klarbook · Students Recover</span>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="assets/profile.jpg" alt="Portrait of Stanley Occean" />
+    </div>
+  </section>
+
+  <section id="about" class="container section">
+    <h2>About</h2>
+    <p>
+      I'm a data science graduate student focused on <strong>ML, analytics, and product-minded automation</strong>.
+      I enjoy shipping practical solutions—Zoho/Glide apps, FastAPI services, and reproducible notebooks.
+      Recently, I’ve built a <em>source credibility scoring</em> pipeline, a <em>delivery ETA predictor</em>,
+      and a <em>student mental health dashboard</em>.
+    </p>
+    <ul class="highlights">
+      <li>🧠 Interests: ML for operations, healthcare analytics, trustworthy AI</li>
+      <li>🛠️ Stack: Python, Pandas, scikit‑learn, SQL, FastAPI, Tableau, Zoho, Glide</li>
+      <li>🎯 Looking for: Internships & project collaborations (Fall 2025–Spring 2026)</li>
+    </ul>
+  </section>
+
+  <section id="experience" class="container section">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <article class="card">
+        <header>
+          <h3>AI Research Fellow — Klarbook</h3>
+          <span class="timeplace">Jul 2025 – Present · Remote</span>
+        </header>
+        <p>Automating class‑action workflow discovery; built survey + outreach tracker; prototyped doc processing pipeline.</p>
+      </article>
+      <article class="card">
+        <header>
+          <h3>Data Analyst Intern — Students Recover</h3>
+          <span class="timeplace">Jul 2025 – Present · Remote</span>
+        </header>
+        <p>Cleaned survey data, built mental‑health dashboard, and drafted early‑warning model for crisis risk.</p>
+      </article>
+      <article class="card">
+        <header>
+          <h3>Senior Nursing Attendant (PCA) — Northwell, SSUH</h3>
+          <span class="timeplace">2018 – Present · Bay Shore, NY</span>
+        </header>
+        <p>Patient care specialist; collaborated with clinical teams; recognized for reliability and empathy.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="projects" class="container section">
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="project">
+        <img src="assets/project-eta.jpg" alt="Delivery ETA Predictor screenshot">
+        <div class="project-body">
+          <h3>Delivery ETA Predictor</h3>
+          <p>FastAPI + ML model to estimate delivery time and delay risk; integrated with Zoho Creator.</p>
+          <div class="tags"><span>Python</span><span>scikit‑learn</span><span>FastAPI</span></div>
+          <div class="links">
+            <a href="#" aria-label="GitHub">Code ↗</a>
+            <a href="#" aria-label="Live demo">Live ↗</a>
+          </div>
+        </div>
+      </article>
+      <article class="project">
+        <img src="assets/project-cred.jpg" alt="Source credibility scoring app screenshot">
+        <div class="project-body">
+          <h3>Source Credibility Scoring</h3>
+          <p>Hybrid rules + ML to rate web sources; outputs JSON and dashboard summaries.</p>
+          <div class="tags"><span>Python</span><span>XGBoost</span><span>NLP</span></div>
+          <div class="links">
+            <a href="#" aria-label="GitHub">Code ↗</a>
+            <a href="#" aria-label="Live demo">Live ↗</a>
+          </div>
+        </div>
+      </article>
+      <article class="project">
+        <img src="assets/project-mental.jpg" alt="Students Recover dashboard screenshot">
+        <div class="project-body">
+          <h3>Students Recover Dashboard</h3>
+          <p>Google stack (Forms → Sheets → Data Studio) with NLP insights and weekly pulse tracking.</p>
+          <div class="tags"><span>Python</span><span>Data Studio</span><span>NLP</span></div>
+          <div class="links">
+            <a href="#" aria-label="Case study">Case study ↗</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills" class="container section">
+    <h2>Skills</h2>
+    <div class="chips">
+      <span>Python</span><span>Pandas</span><span>NumPy</span><span>scikit‑learn</span><span>FastAPI</span>
+      <span>SQL</span><span>Tableau</span><span>Zoho Creator</span><span>Glide</span><span>Git</span>
+    </div>
+  </section>
+
+  <section id="education" class="container section">
+    <h2>Education</h2>
+    <ul class="edu">
+      <li><strong>M.S., Data Science</strong> — Pace University (Expected Dec 2025)</li>
+      <li><strong>B.S., Computer Science</strong> — UASM, Port‑au‑Prince (2013)</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="container section">
+    <h2>Contact</h2>
+    <p>Want to collaborate or chat about data? I'm open to internships, part‑time roles, and impact‑focused projects.</p>
+    <ul class="contact-list">
+      <li>📧 <a href="mailto:stanley@example.com">stanley@example.com</a></li>
+      <li>🔗 <a href="https://www.linkedin.com/in/stanley-occean" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li>🐙 <a href="https://github.com/your-github" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>© <span id="year"></span> Stanley Occean</span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

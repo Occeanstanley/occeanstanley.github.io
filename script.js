@@ -1,3 +1,46 @@
+// Year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Theme toggle
+const root = document.documentElement;
+const themeToggle = document.getElementById('themeToggle');
+const saved = localStorage.getItem('theme');
+if (saved === 'light') root.classList.add('light');
+themeToggle?.addEventListener('click', () => {
+  root.classList.toggle('light');
+  localStorage.setItem('theme', root.classList.contains('light') ? 'light' : 'dark');
+});
+
+// Mobile nav
+const navToggle = document.querySelector('.nav-toggle');
+const navList = document.querySelector('.nav-list');
+navToggle?.addEventListener('click', () => {
+  const open = navList.style.display === 'flex';
+  navList.style.display = open ? 'none' : 'flex';
+  navToggle.setAttribute('aria-expanded', String(!open));
+});
+
+// ===== Analytics tabs (Dashboard / Preview) =====
+const tabs = document.querySelectorAll('.tab-btn');
+const panelDash = document.getElementById('panel-dash');
+const panelPreview = document.getElementById('panel-preview');
+
+tabs.forEach(btn => {
+  btn.addEventListener('click', () => {
+    tabs.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const tab = btn.dataset.tab;
+    if (tab === 'dash'){
+      panelDash.classList.add('panel--show');
+      panelPreview.classList.remove('panel--show');
+    } else {
+      panelPreview.classList.add('panel--show');
+      panelDash.classList.remove('panel--show');
+    }
+  });
+});
+
+
 // Simple interactivity: year, theme toggle, mobile nav
 document.getElementById('year').textContent = new Date().getFullYear();
 

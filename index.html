@@ -90,17 +90,40 @@
       <li>🎯 Open to: Full-time roles, internships, and project collaborations</li>
     </ul>
   </section>
- <section id="analytics" style="padding:40px; background:#f7f7f7; text-align:center;">
-  <h2 style="font-family:Arial, sans-serif; color:#333;">📊 Portfolio Analytics Dashboard</h2>
-  <p style="font-size:16px; color:#555;">
-    View my live website engagement data tracked via Google Analytics and Looker Studio.
-  </p>
-  <a href="https://lookerstudio.google.com/reporting/67e830d1-86a8-4807-8293-07c4c4def5a0/page/kIV1C" 
-     target="_blank" 
-     style="display:inline-block; background:#0073e6; color:white; padding:12px 24px; 
-            border-radius:8px; text-decoration:none; font-weight:bold;">
-     🔍 View Interactive Dashboard
-  </a>
+ <section id="analytics" class="container section">
+  <h2>Portfolio Analytics Dashboard</h2>
+  <p class="muted">Live engagement (Google Analytics 4 + Looker Studio). Toggle between the dashboard and a live page preview.</p>
+
+  <div class="analytics-controls">
+    <button class="tab-btn active" data-tab="dash">Dashboard</button>
+    <button class="tab-btn" data-tab="preview">Site preview</button>
+    <a class="btn small external" href="https://lookerstudio.google.com/reporting" target="_blank" rel="noopener">Open in Looker Studio ↗</a>
+  </div>
+
+  <div class="analytics-grid">
+    <!-- LEFT: Looker Studio embed -->
+    <div class="panel panel--show" id="panel-dash" role="region" aria-label="Analytics dashboard">
+      <iframe
+        id="looker-iframe"
+        class="embed-frame"
+        src="https://lookerstudio.google.com/reporting/67e830d1-86a8-4807-8293-07c4c4def5a0/page/kIV1C"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Portfolio Analytics Dashboard"
+      ></iframe>
+    </div>
+
+    <!-- RIGHT: live website preview (any page of yours) -->
+    <div class="panel" id="panel-preview" role="region" aria-label="Website preview">
+      <iframe
+        class="embed-frame"
+        src="https://occeanstanley.github.io/#projects"
+        loading="lazy"
+        title="Website preview"
+      ></iframe>
+    </div>
+  </div>
 </section>
 
 

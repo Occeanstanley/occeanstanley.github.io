@@ -250,5 +250,64 @@
 </footer>
 
 <script src="script.js"></script>
+  <script>
+  // Initialize Google Analytics if not already
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QXB25QC02P', { anonymize_ip: true }); // your new GA ID
+
+  // ---- Custom Events ----
+
+  // 1️⃣ Resume download
+  document.querySelectorAll('a[href*="Resume.pdf"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      gtag('event', 'resume_download', {
+        event_category: 'engagement',
+        event_label: 'Resume PDF'
+      });
+    });
+  });
+
+  // 2️⃣ Project clicks (any "Live ↗" link)
+  document.querySelectorAll('a[href*="https://"]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (link.innerText.toLowerCase().includes('live')) {
+        gtag('event', 'project_click', {
+          event_category: 'projects',
+          event_label: link.href
+        });
+      }
+    });
+  });
+
+  // 3️⃣ Email clicks
+  document.querySelectorAll('a[href^="mailto:"]').forEach(mail => {
+    mail.addEventListener('click', () => {
+      gtag('event', 'email_click', {
+        event_category: 'contact',
+        event_label: mail.href
+      });
+    });
+  });
+
+  // 4️⃣ Chatbot iframe view (trigger when visible)
+  const chatbot = document.querySelector('iframe[src*="occeanstanley9-chatbot"]');
+  if (chatbot) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          gtag('event', 'chatbot_iframe_view', {
+            event_category: 'chatbot',
+            event_label: 'Embedded Chatbot Viewed'
+          });
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.5 });
+    observer.observe(chatbot);
+  }
+</script>
+
 </body>
 </html>

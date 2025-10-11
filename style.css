@@ -1,22 +1,49 @@
 /* Minimal, modern, responsive portfolio styles */
 :root{
-  --bg:#0b0c0f;
-  --card:#12141a;
-  --text:#E6E8EC;
+  /* dark mode (unchanged) */
+  --bg: #0b0c0f;
+  --card: #12141a;
+  --text: #E6E8EC;
   --muted:#A1A6B0;
   --accent:#62D4FF;
   --accent-2:#9BFFB5;
   --border:#1E2230;
 }
+
+/* NEW polished light palette (professional blue) */
 :root.light{
-  --bg:#ffffff;
-  --card:#f7f9fc;
-  --text:#0b1220;
-  --muted:#5b6475;
-  --accent:#1f6feb;   /* pro blue */
-  --accent-2:#22c55e; /* soft green */
-  --border:#e6ebf2;
+  --bg:#f5f7fb;           /* soft slate */
+  --card:#ffffff;          /* crisp cards */
+  --text:#0b1220;          /* deep slate text */
+  --muted:#5b6478;         /* muted labels */
+  --accent:#2563eb;        /* primary blue */
+  --accent-2:#22c55e;      /* secondary green */
+  --border:#e6e9f2;
 }
+
+/* subtle background for light mode */
+:root.light body{
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #eaf0ff 0%, transparent 50%),
+    radial-gradient(900px 500px at 110% 20%, #e8fff3 0%, transparent 50%),
+    var(--bg);
+}
+
+/* buttons */
+.btn{ display:inline-block; padding:10px 14px; border-radius:12px; border:1px solid var(--border); color:var(--text); text-decoration:none; font-weight:600; }
+.btn.primary{ background:linear-gradient(90deg, var(--accent), var(--accent-2)); color:#001018; border:none; }
+.btn.ghost{ background:transparent; }
+
+/* optional: primary with outline look (for the new dashboard button) */
+.btn.primary.outline{
+  background:transparent;
+  color:var(--accent);
+  border:2px solid var(--accent);
+}
+
+/* tighten CTA spacing on wide screens */
+.cta a{ margin-right:10px; margin-top:8px; }
+
 * { box-sizing: border-box; }
 html, body { margin:0; padding:0; }
 body {
